@@ -3,7 +3,9 @@ ENV NPM_VERSION 5.7.1
 ENV login $1
 ENV password $2
 # Install dependencies for build tools
-RUN add-apt-repository -y ppa:mozillateam/firefox-next && \
+RUN apt-get update && \
+    apt-get install software-properties-common && \
+    add-apt-repository -y ppa:mozillateam/firefox-next && \
     add-apt-repository -y ppa:git-core/ppa && \
     apt-get update && \
     apt-get install -y firefox curl make git git-core wget && \
