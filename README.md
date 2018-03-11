@@ -7,7 +7,5 @@ See this image on [Docker Hub](https://hub.docker.com/r/arthurgeron/docker-nodej
 ## Usage    
 
 This container has the necessary tools to let you run npm commands against the master.  
-        replace user by your github username, password by your github password.
-        docker run -it -v arthurgeron/docker-nodejs user password"
-
-
+        replace user by your github username, password by your github password.   
+        `docker run -it -v arthurgeron/docker-nodejs user password`
