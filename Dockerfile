@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y curl git-all make wget && \
     apt-get install -y python python-pip && \
-    apt-get install -y xvfb x11vnc xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic && \
+    apt-get install -y vim xvfb x11vnc xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic && \
     npm i -g npm@${NPM_VERSION}
 RUN echo '[user]\
         email = ${login}\
