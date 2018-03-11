@@ -4,7 +4,7 @@ ENV login $1
 ENV password $2
 # Install dependencies for build tools
 RUN apt-get update && \
-    apt-get install software-properties-common && \
+    apt-get install -y software-properties-common && \
     add-apt-repository -y ppa:mozillateam/firefox-next && \
     add-apt-repository -y ppa:git-core/ppa && \
     apt-get update && \
