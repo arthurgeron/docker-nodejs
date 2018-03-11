@@ -6,7 +6,7 @@ ENV DISTRO "$(lsb_release -s -c)"
 # Install dependencies for build tools
 RUN apt-get update && \
     apt-get install -y software-properties-common apt-utils build-essential && \
-    add-apt-repository -y ppa:mozillateam/firefox-next && \
+    add-apt-repository -y ppa:mozillateam && \
     apt-get update && \
     apt-get install -y firefox curl git-all make wget && \
     apt-get install -y python python-pip && \
