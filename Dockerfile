@@ -11,6 +11,10 @@ RUN apt-get update && \
     apt-get install -y python python-pip && \
     apt-get install -y vim xvfb x11vnc xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic && \
     npm i -g npm@${NPM_VERSION}
+
+# Installing Chrome
+RUN apt-get install gconf-service libgconf-2-4 libnspr4 libnss3 libpango1.0-0 libappindicator1 libcurl3
+RUN curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o chrome.deb && dpkg --install chrome.deb && rm chrome.deb
 RUN echo '[user]\
         email = ${login}\
         [credential]\
