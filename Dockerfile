@@ -30,6 +30,8 @@ RUN echo 'machine github.com\
          login ${login}\
          password ${password}' >> ~/.netrc
 EXPOSE 8888
+EXPOSE 3000
+EXPOSE 4000
 
 RUN mkdir -p /src/node_modules
 WORKDIR /src
