@@ -14,7 +14,7 @@ RUN apt-get update && \
 
 # Installing Chrome
 RUN apt-get install -y gconf-service libgconf-2-4 libnspr4 libnss3 libpango1.0-0 libappindicator1 libcurl3 xdg-utils
-RUN curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o chrome.deb && dpkg --install chrome.deb && rm chrome.deb
+RUN curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o chrome.deb && dpkg --install chrome.deb && rm chrome.deb; apt-get install -f -y
 RUN echo '[user]\
         email = ${login}\
         [credential]\
